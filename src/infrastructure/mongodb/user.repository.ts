@@ -1,8 +1,11 @@
+import { injectable } from "inversify";
+
 import { UserRepository as UserRepositoryInterface } from "~/domain/user.repository";
 import { UserEntity } from "~/domain/user.entity";
 import { UserMapper } from "~/infrastructure/mongodb/user.mapper";
 import UserModel from "./user.model";
 
+@injectable()
 export default class UserRepository implements UserRepositoryInterface {
     async findAll(): Promise<UserEntity[]> {
         const users = await UserModel.find().lean().exec();

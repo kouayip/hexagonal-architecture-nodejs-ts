@@ -1,8 +1,10 @@
-import { UserRepository } from "~/domain/user.repository";
+import { UserRepositoryContract } from "~/domain/user.repository";
 import { UserEntity } from "~/domain/user.entity";
+import { injectable } from "inversify";
 
+@injectable()
 export class UserService {
-    constructor(private readonly userRepository: UserRepository) {}
+    constructor(private readonly userRepository: UserRepositoryContract) {}
 
     async getAllUsers(): Promise<UserEntity[]> {
         return this.userRepository.findAll();

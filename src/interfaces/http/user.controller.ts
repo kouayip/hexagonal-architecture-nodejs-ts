@@ -1,6 +1,9 @@
+import { injectable } from "inversify";
+
 import { UserService } from "~/application/user.service";
 import { UserEntity } from "~/domain/user.entity";
 
+@injectable()
 export default class UserController {
     constructor(private readonly userService: UserService) {}
 
