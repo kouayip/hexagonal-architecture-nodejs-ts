@@ -18,18 +18,15 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "~/domain": [
+      "~/domain/*": [
         "./src/domain/*.ts"
       ],
-      "~/infrastructure": [
+      "~/infrastructure/*": [
         "./src/infrastructure/*.ts"
       ],
-      "~/controllers": [
-        "./src/infrastructure/controllers/*.ts"
+      "~/interfaces/*": [
+        "./src/interfaces/*.ts"
       ],
-      "~/middleware": [
-        "./src/infrastructure/middleware/*.ts"
-      ]
     }
   },
   "exclude": [

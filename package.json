@@ -15,10 +15,9 @@
     "author": "",
     "license": "ISC",
     "imports": {
-        "~/domain": "./src/domain/*.ts",
-        "~/infrastructure": "./src/infrastructure/*.ts",
-        "~/controllers": "./src/infrastructure/controllers/*.ts",
-        "~/middleware": "./src/infrastructure/middleware/*.ts"
+        "~/domain/*": "./src/domain/*.ts",
+        "~/infrastructure/*": "./src/infrastructure/*.ts",
+        "~/interfaces/*": "./src/interfaces/controllers/*.ts"
     },
     "devDependencies": {
         "@types/jest": "^29.5.11",
@@ -37,5 +36,9 @@
         "tsc-alias": "^1.8.8",
         "tsconfig-paths": "^4.2.0",
         "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "@typegoose/typegoose": "^12.1.0",
+        "mongoose": "^8.1.1"
     }
 }
