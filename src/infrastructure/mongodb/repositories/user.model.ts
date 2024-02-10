@@ -3,11 +3,11 @@ import {
     index,
     getModelForClass,
 } from "@typegoose/typegoose";
-import { UserEntity } from "~/domain/user.entity";
+import { User } from "~/domain/user.entity";
 import { Types } from "mongoose";
 
 @index({ email: 1 })
-export class UserSchema implements Omit<UserEntity, "id"> {
+export class UserSchema implements Omit<User, "id"> {
     readonly _id!: Types.ObjectId;
 
     @Property({ required: true, unique: true })
