@@ -705,6 +705,13 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
+"@toolibs/http-decorator@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@toolibs/http-decorator/-/http-decorator-1.2.0.tgz#bd6df80856890c6fe5295020a4cb86db775d884b"
+  integrity sha512-yK5af/xaLpqINS0U259USYQ0+THX0DjtSli+mbEOUzqLaT2wAMxUhBTmELptwQygLQqpad09OWCr4z1doS24gg==
+  dependencies:
+    inversify "^6.0.2"
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"

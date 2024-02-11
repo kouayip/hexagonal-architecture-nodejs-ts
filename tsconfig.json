@@ -30,6 +30,9 @@
       "~/interfaces/*": [
         "./src/interfaces/*.ts"
       ],
+      "~/core/*": [
+        "./src/core/*"
+      ],
     }
   },
   "exclude": [

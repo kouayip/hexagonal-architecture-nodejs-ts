@@ -1,18 +1,18 @@
-import { injectable } from "inversify";
-
 import { UserService } from "~/application/user.service";
 import { User } from "~/domain/user.entity";
+import { Controller, Get, Params } from "@toolibs/http-decorator";
 
-@injectable()
+@Controller("/users")
 export default class UserController {
     constructor(private readonly userService: UserService) {}
 
-    //TODO: change go use http methode decorator, use request and return response
+    @Get()
     async getAllUsers(): Promise<User[]> {
         return this.userService.getAllUsers();
     }
 
-    async getUser(id: string): Promise<User | null> {
+    @Get("/:id")
+    async getUser(@Params("id") id: string): Promise<User | null> {
         return this.userService.getUserById(id);
     }
 }
