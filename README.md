@@ -34,7 +34,7 @@ yarn install
 Run the program.
 
 ```shell
-yarn start
+yarn dev
 ```
 
 # Test
